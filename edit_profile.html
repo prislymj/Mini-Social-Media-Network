@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+  <h1>Edit Profile</h1>
+  <form method="POST" action="{{ url_for('edit_profile') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    {{ form.hidden_tag() }}
+    <div>
+      <label for="name">Name:</label>
+      {{ form.name }}
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      {{ form.email }}
+    </div>
+    <div>
+      <label for="dob">Date of Birth:</label>
+      {{ form.dob }}
+    </div>
+    <div>
+      <label for="phone_number">Phone Number:</label>
+      {{ form.phone_number }}
+    </div>
+    <div>
+      <label for="bio">Bio:</label>
+      {{ form.bio }}
+    </div>
+    <div>
+      <label for="image_url">Image URL:</label>
+      {{ form.image_url }}
+    </div>
+    <button type="submit">Save Changes</button>
+  </form>
+{% endblock %}

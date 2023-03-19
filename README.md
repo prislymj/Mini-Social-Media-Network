@@ -7,6 +7,10 @@ To interact with MySQL, I used SQLAlchemy, an open-source SQL toolkit and ORM (O
 In this project, I created a Flask web application that allows users to sign up, log in, create profiles, and search for other users. The User and UserProfile classes define the database schema for the users and their profiles. The User class stores the basic information of a user (name, email, and password), while the UserProfile class stores additional information such as the user's date of birth, phone number, bio, and image URL.
 
 * Templates folder contains front-end(all HTML pages). Static folder contains CSS styling
+* app.py is the main Python file that contains the Flask application. This file is responsible for handling incoming HTTP requests, rendering HTML templates, and returning appropriate responses to the client.
+    * Importing the required modules and dependencies, such as Flask, SQLAlchemy, etc.
+    * Defining various routes (URLs) and their corresponding functions to handle HTTP requests.
+    * Defining database models using SQLAlchemy to represent the database tables and their relationships.
 
 
 The application includes several routes, including:
